@@ -1,7 +1,14 @@
 return {
   "coder/claudecode.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
-  config = true,
+  opts = {
+    diff_opts = {
+      open_in_new_tab = true,
+      hide_terminal_in_new_tab = false,
+      keep_terminal_focus = true,
+      layout = "vertical",
+    },
+  },
   init = function()
     vim.keymap.set("t", "<C-s>", [[<C-\><C-n>]], { desc = "Scroll mode" })
   end,
