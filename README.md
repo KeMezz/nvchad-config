@@ -2,6 +2,8 @@
 
 NvChad v2.5 기반의 개인 Neovim 설정입니다.
 
+<img width="2560" height="1440" alt="スクリーンショット 2025-12-07 12 53 30" src="https://github.com/user-attachments/assets/d82ae835-60d6-4eac-9beb-fde4be3960fc" />
+
 ## 요구사항
 
 - **Neovim** >= 0.10.0
