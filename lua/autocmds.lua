@@ -1,5 +1,8 @@
 require "nvchad.autocmds"
 
+-- 非アクティブウィンドウの背景を暗くする
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "#181825" })
+
 -- Hide terminal buffers from tab list
 vim.api.nvim_create_autocmd("TermOpen", {
   callback = function()
