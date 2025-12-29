@@ -23,6 +23,7 @@ lua/
 ├── autocmds.lua        # 자동 명령어 (nvchad.autocmds 확장)
 ├── configs/            # 플러그인 설정
 │   ├── conform.lua     # 코드 포맷터 설정
+│   ├── lazy.lua        # lazy.nvim 부트스트랩
 │   └── lspconfig.lua   # LSP 서버 설정
 ├── plugins/            # lazy.nvim 플러그인 스펙
 │   ├── init.lua        # 핵심 플러그인 (conform, lspconfig, treesitter)
