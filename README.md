@@ -18,16 +18,10 @@ NvChad v2.5 기반의 개인 Neovim 설정입니다.
 brew install neovim ripgrep node
 ```
 
-### Ubuntu/Debian
+### Arch Linux
 
 ```bash
-# Neovim (최신 버전)
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-sudo tar -C /opt -xzf nvim-linux64.tar.gz
-sudo ln -s /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
-
-# 의존성
-sudo apt install git ripgrep nodejs npm
+sudo pacman -S neovim git ripgrep nodejs npm
 ```
 
 ## 설치
@@ -45,7 +39,7 @@ mv ~/.cache/nvim ~/.cache/nvim.bak
 ### 2. 리포지토리 Clone
 
 ```bash
-git clone https://github.com/minuchideprecated/nvim.git ~/.config/nvim
+git clone https://github.com/KeMezz/nvchad-config.git ~/.config/nvim
 ```
 
 ### 3. Neovim 실행
@@ -70,6 +64,30 @@ Neovim 내에서 Mason을 통해 LSP 서버를 설치합니다:
 :Mason
 ```
 
+### 5. Lazygit 설정 (선택사항)
+
+Neovim 내에서 lazygit을 사용할 때, 파일을 현재 Neovim 버퍼로 열려면 lazygit 설정이 필요합니다.
+
+**macOS:**
+```bash
+mkdir -p ~/Library/Application\ Support/lazygit
+cat > ~/Library/Application\ Support/lazygit/config.yml << 'EOF'
+os:
+  edit: 'nvim --server "$NVIM" --remote-send "<C-\\><C-n>:q<CR>" && nvim --server "$NVIM" --remote {{filename}}'
+EOF
+```
+
+**Linux (Arch, Ubuntu 등):**
+```bash
+mkdir -p ~/.config/lazygit
+cat > ~/.config/lazygit/config.yml << 'EOF'
+os:
+  edit: 'nvim --server "$NVIM" --remote-send "<C-\\><C-n>:q<CR>" && nvim --server "$NVIM" --remote {{filename}}'
+EOF
+```
+
+설정 후 lazygit에서 `e` 키로 파일을 열면 현재 Neovim 버퍼에서 열립니다.
+
 ## 주요 키맵
 
 | 키 | 설명 |
@@ -79,6 +97,7 @@ Neovim 내에서 Mason을 통해 LSP 서버를 설치합니다:
 | `<leader>th` | 테마 선택 |
 | `<leader>ff` | 파일 찾기 |
 | `<leader>fw` | 텍스트 검색 (grep) |
+| `<leader>lg` | Lazygit 열기 |
 | `<leader>1-9` | 버퍼 1-9로 이동 |
 
 ## 파일 구조
