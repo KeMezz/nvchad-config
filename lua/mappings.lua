@@ -50,3 +50,6 @@ end, { desc = "Move buffer left" })
 map("n", "<leader>bl", function()
   require("nvchad.tabufline").move_buf(1)
 end, { desc = "Move buffer right" })
+
+-- NvimTree toggle (NvChadのデフォルトfocusをtoggleに変更)
+map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle NvimTree" })
