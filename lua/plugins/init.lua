@@ -2,7 +2,7 @@ return {
   -- Code formatter
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- Format on save
+    event = "BufWritePre", -- Format on save
     opts = require "configs.conform",
   },
 
@@ -14,17 +14,20 @@ return {
     end,
   },
 
-  -- Test new blink completion
-  -- { import = "nvchad.blink.lazyspec" },
+  -- blink.cmp 자동완성
+  { import = "nvchad.blink.lazyspec" },
 
   -- Treesitter syntax parsing
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim", "lua", "vimdoc",
-       "html", "css"
-  		},
-  	},
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+      },
+    },
   },
 }

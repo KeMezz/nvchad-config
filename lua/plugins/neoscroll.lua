@@ -1,5 +1,4 @@
 -- lua/plugins/neoscroll.lua
--- スムーズスクロールプラグイン
 return {
   "karb94/neoscroll.nvim",
   event = "VeryLazy",

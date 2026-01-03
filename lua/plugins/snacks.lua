@@ -1,4 +1,4 @@
--- opencode.nvimの依存プラグイン
+-- opencode.nvim의 의존 플러그인
 return {
   "folke/snacks.nvim",
   opts = {
@@ -7,9 +7,8 @@ return {
     terminal = {
       win = {
         wo = {
-          -- ターミナルで行番号を非表示
-          number = false,
-          relativenumber = false,
+          number = true,
+          relativenumber = true,
         },
       },
     },

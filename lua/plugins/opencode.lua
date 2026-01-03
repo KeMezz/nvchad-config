@@ -1,11 +1,11 @@
--- opencode AI アシスタント統合
+-- opencode AI 어시스턴트 통합
 return {
   "NickvanDyke/opencode.nvim",
   dependencies = {
     "folke/snacks.nvim",
   },
   init = function()
-    -- autoreadを有効化（opencodeがファイルを編集した時に自動リロード）
+    -- autoread 활성화 (opencode가 파일을 편집했을 때 자동 리로드)
     vim.o.autoread = true
   end,
   keys = {
