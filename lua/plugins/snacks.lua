@@ -2,13 +2,14 @@
 return {
   "folke/snacks.nvim",
   opts = {
+    dashboard = { enabled = true },
     input = {},
     picker = {},
     terminal = {
       win = {
         wo = {
-          number = true,
-          relativenumber = true,
+          number = false,
+          relativenumber = false,
         },
       },
     },
