@@ -1,9 +1,9 @@
 require "nvchad.autocmds"
 
--- Hide terminal buffers from tab list
 vim.api.nvim_create_autocmd("TermOpen", {
   callback = function()
     vim.opt_local.buflisted = false
+    vim.keymap.set("t", "<C-z>", "<Nop>", { buffer = true, desc = "Disable suspend" })
   end,
 })
 
