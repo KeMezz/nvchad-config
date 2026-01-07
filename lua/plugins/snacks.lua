@@ -1,4 +1,4 @@
--- opencode.nvim의 의존 플러그인
+-- opencode.nvim dependency
 return {
   "folke/snacks.nvim",
   opts = {
@@ -11,6 +11,15 @@ return {
           number = false,
           relativenumber = false,
         },
+      },
+    },
+    image = {
+      enabled = true,
+      doc = {
+        inline = false,
+        float = true,
+        max_width = 60,
+        max_height = 30,
       },
     },
   },
