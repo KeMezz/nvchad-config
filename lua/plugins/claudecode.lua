@@ -17,6 +17,7 @@ return {
   },
   keys = {
     { "<leader>cc", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude Code" },
+    { "<leader>cC", "<cmd>ClaudeCode --dangerously-skip-permissions<cr>", desc = "Claude Code (skip permissions)" },
     { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude Code" },
     { "<leader>cb", "<cmd>ClaudeCodeAdd %<cr>", desc = "Add current buffer" },
     { "<leader>cs", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send to Claude" },
